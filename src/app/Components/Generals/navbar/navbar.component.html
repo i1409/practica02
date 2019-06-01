@@ -1,0 +1,17 @@
+
+<ul class="nav nav-tabs bg-primary text-light" id="navId">
+  <li class="nav-item" [ngClass]="{'active fondo text-primary': ruta=='Inicio'}">
+    <a  class="nav-link " (click)="inicio()">Inicio</a>
+  </li>
+  <li class="nav-item" [ngClass]="{'active fondo text-primary': ruta=='Formulario'}">
+    <a class="nav-link" (click)="formulario()">Agregar Registro</a>
+  </li>
+  <li class="nav-item" [ngClass]="{'active fondo text-primary': ruta=='Tabla'}">
+    <a class="nav-link" (click)="tabla()" >Ver Registros</a>
+  </li>
+  <li class="nav-item" [ngClass]="{'active fondo text-primary': ruta=='Eliminar'}">
+    <a class="nav-link" (click)="eliminar()" >Eliminar Registro</a>
+  </li>
+
+</ul>
+

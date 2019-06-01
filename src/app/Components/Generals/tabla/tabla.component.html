@@ -1,0 +1,32 @@
+<h1>Registros</h1>
+<table class="table  table-inverse ">
+  <thead class="thead-inverse text-light bg-secondary">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of personas">
+      <tr>
+        <td scope="row">{{item.id}}</td>
+        <td>{{item.nombre | uppercase}}</td>
+        <td>{{item.correo | lowercase}}</td>
+        <td>{{item.telefono}}</td>
+        <td>{{item.direccion | uppercase}}</td>
+
+
+      </tr>
+      <tr>
+        <td scope="row"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+</table>

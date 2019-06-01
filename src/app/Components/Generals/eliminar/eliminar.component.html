@@ -1,0 +1,37 @@
+<div class="container container-fluid">
+  <div class="row">
+    <form class="form-group col-12" [formGroup]="forma">
+      <div class="form-group col-12">
+        <h6 class="mt-2"><p class="text-danger">*Si llena ambos campos se realizará la busqueda con el ID</p></h6>
+        <label for="id">ID Persona</label>
+        <input type="text" name="id" id="id" formControlName="id" class="form-control" placeholder="ID: 10">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre: Israel">
+        <button class="mt-3 btn btn-block form-control btn-primary" (click)="buscar()" >Buscar</button>
+
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <table class="table table-inverse">
+      <thead class="thead-inverse">
+        <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>CORREO</th>
+          <th>TELEFONO</th>
+          <th>ACCION</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let rs of result">
+          <tr>
+            <td scope="row">{{rs.id}}</td>
+            <td>{{rs.nombre}}</td>
+            <td>{{rs.correo}}</td>
+            <td>{{rs.telefono}}</td>
+            <td> <button class="btn btn-block form-control btn-danger" (click)="borrar(rs.id)">Eliminar</button></td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
